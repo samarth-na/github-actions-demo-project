@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "preserve",
     "esModuleInterop": true,
-    "target": "es6",
-    "moduleResolution": "node",
+    "target": "esnext",
+    "moduleResolution": "bundler",
     "removeComments": true,
     "sourceMap": false,
 
@@ -13,12 +13,11 @@
 
     "skipLibCheck": true,
     "allowJs": true,
-    // "checkJs": true,
-    
+
     "strict": false,
-    "types": ["jest", "node"]
+    "types": ["bun"]
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist/*", "src/static"],
-  "lib": ["es6"]
+  "lib": ["esnext"]
 }

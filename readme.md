@@ -26,13 +26,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: node:20
+      image: oven/bun:1
     steps:
       - uses: actions/checkout@v3
-        with:
-          node-version: 20
-      - run: npm ci
-      - run: npm test
-      - run: npm run build
+      - run: bun install
+      - run: bun test
+      - run: bun run build
 
 ```
