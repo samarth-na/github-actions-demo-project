@@ -7,9 +7,8 @@
     "test": "bun test",
     "dev": "bun run start --stage local",
     "start": "bun run src/index.ts",
-    "build:clean": "rm -rf ./dist/*; rm -rf ./dist; mkdir -p ./dist/logs",
-    "build:config": "cp ./src/config.json ./dist/config.json; cp ./package.json ./dist/package.json",
-    "build": "bun run build:clean && bun run build:config && tsc --skipLibCheck"
+    "build:clean": "rm -rf ./dist && mkdir -p ./dist/logs",
+    "build": "bun run build:clean && tsc --skipLibCheck"
   },
   "author": "Tom Shaw",
   "license": "ISC",
